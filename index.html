@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="https://i.imgur.com/bYFSymC.png" type="image/png">
+  <title>Campanha Vitaminação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <img src="https://www.drogariasultrapopular.com.br/wp-content/uploads/2019/05/UP_Facebook_post_1000x1000px_Logo-1.jpg" alt="Logo">
+    <h1>Consulta de Produtos</h1>
+
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Buscar por nome, fabricante ou EAN...">
+    </div>
+
+    <button class="btn-guia" onclick="mostrarGuia()">📖 Ver Guia de Venda</button>
+    <button id="toggleDarkMode" class="btn-guia">🌙 Modo Noturno</button>
+
+  </div>
+
+    <div id="guia-container">
+    <h2>Guia de Venda - Frases Rápidas para Vender Vitaminas</h2>
+
+    <h3>Abertura (puxar assunto)</h3>
+    <ul>
+      <li>“Com esse clima oscilando você tem reforçado sua imunidade?”</li>
+      <li>“Vou apresentar para o Sr uma opção eficaz para fortalecer sua imunidade.”</li>
+      <li>“Na correria do dia a dia, está conseguindo manter energia e disposição?”</li>
+      <li>“Está conseguindo se alimentar bem ou precisa de uma forcinha extra?”</li>
+      <li>“Tem algum suplemento que você costuma tomar todo dia?”</li>
+      <li>“Hoje temos uma vitamina com excelente custo-benefício e ótimos resultados. Posso lhe explicar rapidamente?”</li>
+    </ul>
+
+    <h3>Argumento – Criar valor</h3>
+    <ul>
+      <li>“Esta vitamina contém formulação completa, indicada para fortalecer o sistema imunológico e aumentar a disposição.”</li>
+      <li>“Com apenas uma cápsula diária, o Sr garante a reposição adequada de nutrientes essenciais.”</li>
+      <li>“É prática e de rápida absorção, ideal para a rotina corrida.”</li>
+      <li>“Produto com alta absorção e excelente aceitação entre clientes que buscam mais energia e resistência física.”</li>
+      <li>“É prática, econômica e pode ser utilizada com segurança por adultos de diferentes idades.”</li>
+      <li>“Tem ótima aceitação entre nossos clientes e excelente relação custo-benefício.”</li>
+    </ul>
+
+    <h3>Fechamento – Convidar para a compra</h3>
+    <ul>
+      <li>“Posso incluir junto na sua compra para que já inicie hoje o cuidado com a sua saúde.”</li>
+      <li>“Aproveite que o valor especial é válido apenas para hoje.”</li>
+      <li>“Temos poucas unidades nesta condição. Deseja garantir a sua agora?”</li>
+      <li>“Recomendo levar o tratamento para um mês completo, assim otimiza os resultados.”</li>
+      <li>“Deseja aproveitar e já levar também para alguém da família?”</li>
+    </ul>
+  </div>
+
+    <div class="container tabs-container">
+        <button class="tab-button active" onclick="openLab(event, 'ALTHAIA')">ALTHAIA</button>
+        <button class="tab-button" onclick="openLab(event, 'CIMED')">CIMED</button>
+        <button class="tab-button" onclick="openLab(event, 'DELTA')">DELTA</button>
+        <button class="tab-button" onclick="openLab(event, 'GEOLAB')">GEOLAB</button>
+        <button class="tab-button" onclick="openLab(event, 'KLEY-HERTZ')">KLEY HERTZ</button>
+        <button class="tab-button" onclick="openLab(event, 'MAXINUTRI')">MAXINUTRI</button>
+        <button class="tab-button" onclick="openLab(event, 'SUPRACORP')">SUPRACORP</button>
+  </div>
+
+    <div class="container">
+        <div id="ALTHAIA" class="tab-content active">
+            <h2>Produtos ALTHAIA</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>EAN</th>
+                        <th>Produto</th>
+                        <th>Fabricante</th>
+                        <th>Premiação</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable-ALTHAIA"></tbody>
+            </table>
+        </div>
+
+        <div id="CIMED" class="tab-content">
+            <h2>Produtos CIMED</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>EAN</th>
+                        <th>Produto</th>
+                        <th>Fabricante</th>
+                        <th>Premiação</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable-CIMED"></tbody>
+            </table>
+        </div>
+        
+        <div id="DELTA" class="tab-content">
+            <h2>Produtos DELTA</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>EAN</th>
+                        <th>Produto</th>
+                        <th>Fabricante</th>
+                        <th>Premiação</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable-DELTA"></tbody>
+            </table>
+        </div>
+        
+        <div id="GEOLAB" class="tab-content">
+            <h2>Produtos GEOLAB</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>EAN</th>
+                        <th>Produto</th>
+                        <th>Fabricante</th>
+                        <th>Premiação</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable-GEOLAB"></tbody>
+            </table>
+        </div>
+        
+        <div id="KLEY-HERTZ" class="tab-content">
+            <h2>Produtos KLEY HERTZ</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>EAN</th>
+                        <th>Produto</th>
+                        <th>Fabricante</th>
+                        <th>Premiação</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable-KLEY-HERTZ"></tbody>
+            </table>
+        </div>
+        
+        <div id="MAXINUTRI" class="tab-content">
+            <h2>Produtos MAXINUTRI</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>EAN</th>
+                        <th>Produto</th>
+                        <th>Fabricante</th>
+                        <th>Premiação</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable-MAXINUTRI"></tbody>
+            </table>
+        </div>
+        
+        <div id="SUPRACORP" class="tab-content">
+            <h2>Produtos SUPRACORP</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>EAN</th>
+                        <th>Produto</th>
+                        <th>Fabricante</th>
+                        <th>Premiação</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable-SUPRACORP"></tbody>
+            </table>
+        </div>
+        
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
