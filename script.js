@@ -92,7 +92,7 @@ function renderProducts() {
     const tableId = `productTable-${activeLab.replace(' ', '-')}`; 
     const productTable = document.getElementById(tableId);
 
-    // Limpa todas as tabelas, exceto a ativa (para evitar dados duplicados ao alternar)
+    // Limpa o conteúdo de todas as tabelas (importante para o filtro de busca)
     document.querySelectorAll('tbody[id^="productTable-"]').forEach(tbody => {
         if (tbody.id !== tableId) {
             tbody.innerHTML = '';
@@ -109,7 +109,6 @@ function renderProducts() {
     const filtrados = produtosDoLaboratorio.filter(p => {
         const matchNome = p.nome.toLowerCase().includes(filtro);
         const matchEAN = p.ean.includes(filtro);
-        // Busca só precisa checar Nome e EAN, pois já filtramos por Fabricante
         return matchNome || matchEAN;
     });
 
@@ -130,7 +129,6 @@ function renderProducts() {
 // Sua função e eventos de guia e modo noturno
 function mostrarGuia() {
     const guia = document.getElementById("guia-container");
-    // O seu botão 'Ver Guia de Venda' esconde/mostra a div do guia
     guia.style.display = guia.style.display === "none" || guia.style.display === "" ? "block" : "none";
 }
 
