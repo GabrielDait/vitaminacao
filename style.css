@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #c20e1a; /* vermelho da marca */
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.container img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+h1, h2, h3 {
+  color: #fff;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #FFD700;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-guia {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background-color: #FFD700;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.btn-guia:hover {
+  background-color: #bfa600;
+  color: #fff;
+}
+
+#guia-container {
+  display: none;
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#guia-container h3 {
+  color: #c20e1a;
+}
+
+#guia-container ul {
+  list-style-type: "💬 ";
+  padding-left: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 20px;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid White;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: Red;
+  color: White;
+}
+
+tr:hover {
+  background-color: #f2f2f2;
+}
+
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    max-width: 100%;
+  }
+
+  .container img {
+    width: 80px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    font-size: 14px;
+  }
+}
+/* ===== Modo Noturno ===== */
+body.dark-mode {
+  background-color: #2a0b10; /* fundo escuro, mantendo tom vermelho da marca */
+  color: #f5f5f5; /* texto claro */
+}
+
+body.dark-mode .container {
+  background-color: #2a0b10; /* fundo das caixas mais escuro que o body */
+  color: #f5f5f5;
+}
+
+body.dark-mode input[type="text"] {
+  background-color: #2a0b10; /* input escuro */
+  color: #fff;
+  border: 2px solid #FFD700; /* mantém borda dourada */
+}
+
+body.dark-mode table {
+  background-color: #2a0b10;
+  color: #f5f5f5;
+  border-color: White;
+}
+
+body.dark-mode th {
+  background-color: #2a0b10; /* cabeçalho mais escuro */
+  color: #fff;
+}
+
+body.dark-mode td {
+  border-bottom: 1px solid #2a0b10;
+}
+
+body.dark-mode tr:hover {
+  background-color: #2a0b10; /* hover em tons escuros */
+}
+
+body.dark-mode .btn-guia {
+  background-color: #b00c15; /* botão em tom escuro de vermelho */
+  color: #fff;
+}
+
+body.dark-mode .btn-guia:hover {
+  background-color: #ff1a2c;
+  color: #fff;
+}
+
+body.dark-mode #guia-container {
+  background-color: #2a0b10;
+  color: #f5f5f5;
+  border-color: #2a0b10;
+}
+
+/* Troca da imagem no modo noturno */
+body.dark-mode .container img {
+  content: url("https://www.farmarcas.com.br/wp-content/uploads/2019/07/ultrapopular_branco.png");
+}
+
+
+/* ===== NOVOS ESTILOS PARA ABAS (TABS) ===== */
+
+/* Estilo dos botões das abas */
+.tab-button {
+    background-color: #FFD700; /* Dourado */
+    color: #000;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-right: 5px;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /* Ajuste de margem para alinhar melhor */
+    margin-bottom: -1px; 
+}
+
+.tab-button:hover {
+    background-color: #bfa600;
+    color: #fff;
+}
+
+/* Estilo do botão ativo (selecionado) */
+.tab-button.active {
+    background-color: #fff; /* Fundo branco para 'conectar' com a tabela */
+    color: #c20e1a; /* Texto em vermelho */
+    border-bottom: 3px solid #fff; /* Linha de destaque branca (para cobrir a borda da tabela) */
+}
+
+/* Esconde o conteúdo das abas por padrão */
+.tab-content {
+    display: none; 
+    text-align: left; /* Alinha o h2 dentro da aba */
+}
+
+/* Mostra apenas a aba com a classe 'active' */
+.tab-content.active {
+    display: block;
+}
+
+/* Estilo das abas no Modo Noturno */
+body.dark-mode .tab-button {
+    background-color: #b00c15; /* Botão escuro */
+    color: #fff;
+}
+
+body.dark-mode .tab-button:hover {
+    background-color: #ff1a2c;
+}
+
+body.dark-mode .tab-button.active {
+    background-color: #2a0b10; /* Fundo escuro para 'conectar' com a tabela escura */
+    color: #FFD700; /* Texto dourado */
+    border-bottom: 3px solid #2a0b10;
+}
+
+body.dark-mode .tab-content h2 {
+    color: #f5f5f5;
+}
