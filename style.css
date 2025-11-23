@@ -101,7 +101,7 @@ th, td {
 }
 
 th {
-  background-color: Red;
+  background-color: #c20e1a; /* Vermelho da marca */
   color: White;
 }
 
@@ -184,12 +184,12 @@ body.dark-mode .container img {
 }
 
 
-/* ===== NOVOS ESTILOS PARA ABAS (TABS) ===== */
+/* ===== NOVOS ESTILOS PARA ABAS (TABS) - CORES OFICIAIS ===== */
 
 /* Estilo dos botões das abas */
 .tab-button {
     background-color: #FFD700; /* Dourado */
-    color: #000;
+    color: #c20e1a; /* Texto em vermelho da marca */
     border: none;
     outline: none;
     cursor: pointer;
@@ -200,26 +200,25 @@ body.dark-mode .container img {
     font-weight: bold;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    /* Ajuste de margem para alinhar melhor */
     margin-bottom: -1px; 
 }
 
 .tab-button:hover {
-    background-color: #bfa600;
+    background-color: #bfa600; /* Dourado mais escuro no hover */
     color: #fff;
 }
 
 /* Estilo do botão ativo (selecionado) */
 .tab-button.active {
     background-color: #fff; /* Fundo branco para 'conectar' com a tabela */
-    color: #c20e1a; /* Texto em vermelho */
+    color: #c20e1a; /* Texto em vermelho (Cor da marca) */
     border-bottom: 3px solid #fff; /* Linha de destaque branca (para cobrir a borda da tabela) */
 }
 
 /* Esconde o conteúdo das abas por padrão */
 .tab-content {
     display: none; 
-    text-align: left; /* Alinha o h2 dentro da aba */
+    text-align: left; 
 }
 
 /* Mostra apenas a aba com a classe 'active' */
@@ -229,7 +228,7 @@ body.dark-mode .container img {
 
 /* Estilo das abas no Modo Noturno */
 body.dark-mode .tab-button {
-    background-color: #b00c15; /* Botão escuro */
+    background-color: #b00c15; 
     color: #fff;
 }
 
@@ -238,7 +237,7 @@ body.dark-mode .tab-button:hover {
 }
 
 body.dark-mode .tab-button.active {
-    background-color: #2a0b10; /* Fundo escuro para 'conectar' com a tabela escura */
+    background-color: #2a0b10; /* Fundo escuro (mesmo da tabela) */
     color: #FFD700; /* Texto dourado */
     border-bottom: 3px solid #2a0b10;
 }
