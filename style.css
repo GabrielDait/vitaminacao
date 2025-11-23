@@ -4,10 +4,10 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #c20e1a; /* vermelho da marca */
+  background-color: #c20e1a; /* SEU VERMELHO: Fundo principal do body */
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: #fff; /* Texto padrão branco para contraste com o fundo vermelho */
 }
 
 .container {
@@ -24,7 +24,7 @@ body {
 }
 
 h1, h2, h3 {
-  color: #fff;
+  color: #fff; /* Títulos em branco no fundo principal vermelho */
 }
 
 .controls {
@@ -39,42 +39,44 @@ input[type="text"] {
   padding: 10px;
   width: 100%;
   max-width: 400px;
-  border: 2px solid #FFD700;
+  border: 2px solid #FFD700; /* SEU DOURADO: Borda do input de busca */
   border-radius: 5px;
   font-size: 16px;
+  background-color: #fff; /* Fundo do input branco */
+  color: #000; /* Texto do input preto */
 }
 
 .btn-guia {
   display: block;
   margin: 20px auto;
   padding: 12px 24px;
-  background-color: #FFD700;
-  color: #000;
+  background-color: #FFD700; /* SEU DOURADO: Fundo do botão guia */
+  color: #c20e1a; /* SEU VERMELHO: Texto do botão guia */
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .btn-guia:hover {
-  background-color: #bfa600;
-  color: #fff;
+  background-color: #bfa600; /* Dourado mais escuro no hover */
+  color: #fff; /* Texto branco no hover */
 }
 
 #guia-container {
   display: none;
   max-width: 1000px;
   margin: 20px auto;
-  background-color: #fff;
-  color: #000;
+  background-color: #fff; /* Fundo branco para o guia de venda */
+  color: #000; /* Texto preto para o guia de venda */
   padding: 20px;
   border-radius: 8px;
 }
 
-#guia-container h3 {
-  color: #c20e1a;
+#guia-container h2, #guia-container h3 {
+  color: #c20e1a; /* SEU VERMELHO: Títulos dentro do guia de venda */
 }
 
 #guia-container ul {
@@ -87,11 +89,11 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   margin-top: 20px;
-  background-color: #fff;
-  color: #000;
-  border: 2px solid White;
+  background-color: #fff; /* Fundo da tabela branco */
+  color: #000; /* Texto da tabela preto */
+  border: 2px solid #FFD700; /* SEU DOURADO: Borda da tabela */
   border-radius: 8px;
-  overflow: hidden;
+  overflow: hidden; /* Garante que o border-radius funcione nas células internas */
 }
 
 th, td {
@@ -101,12 +103,12 @@ th, td {
 }
 
 th {
-  background-color: #c20e1a; /* Vermelho da marca */
-  color: White;
+  background-color: #c20e1a; /* SEU VERMELHO: Cabeçalho da tabela */
+  color: White; /* Texto do cabeçalho branco */
 }
 
 tr:hover {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; /* Leve cinza no hover da linha da tabela */
 }
 
 @media (max-width: 600px) {
@@ -126,122 +128,46 @@ tr:hover {
     font-size: 14px;
   }
 }
+
 /* ===== Modo Noturno ===== */
 body.dark-mode {
-  background-color: #2a0b10; /* fundo escuro, mantendo tom vermelho da marca */
-  color: #f5f5f5; /* texto claro */
+  background-color: #2a0b10; /* Fundo escuro mais próximo do vermelho */
+  color: #f5f5f5; /* Texto claro */
 }
 
 body.dark-mode .container {
-  background-color: #2a0b10; /* fundo das caixas mais escuro que o body */
+  background-color: #2a0b10; 
   color: #f5f5f5;
 }
 
 body.dark-mode input[type="text"] {
-  background-color: #2a0b10; /* input escuro */
+  background-color: #3b171c; /* Input escuro */
   color: #fff;
-  border: 2px solid #FFD700; /* mantém borda dourada */
+  border-color: #FFD700; /* Mantém borda dourada */
 }
 
 body.dark-mode table {
-  background-color: #2a0b10;
+  background-color: #3b171c; /* Fundo da tabela escuro */
   color: #f5f5f5;
-  border-color: White;
+  border-color: #FFD700; /* Borda dourada no modo noturno */
 }
 
 body.dark-mode th {
-  background-color: #2a0b10; /* cabeçalho mais escuro */
+  background-color: #2a0b10; /* Cabeçalho mais escuro */
   color: #fff;
 }
 
 body.dark-mode td {
-  border-bottom: 1px solid #2a0b10;
+  border-bottom: 1px solid #4a2228; /* Borda mais suave */
 }
 
 body.dark-mode tr:hover {
-  background-color: #2a0b10; /* hover em tons escuros */
+  background-color: #4a2228; /* Hover em tons escuros */
 }
 
 body.dark-mode .btn-guia {
-  background-color: #b00c15; /* botão em tom escuro de vermelho */
+  background-color: #b00c15; /* Botão em tom escuro de vermelho */
   color: #fff;
 }
 
 body.dark-mode .btn-guia:hover {
-  background-color: #ff1a2c;
-  color: #fff;
-}
-
-body.dark-mode #guia-container {
-  background-color: #2a0b10;
-  color: #f5f5f5;
-  border-color: #2a0b10;
-}
-
-/* Troca da imagem no modo noturno */
-body.dark-mode .container img {
-  content: url("https://www.farmarcas.com.br/wp-content/uploads/2019/07/ultrapopular_branco.png");
-}
-
-
-/* ===== NOVOS ESTILOS PARA ABAS (TABS) - CORES OFICIAIS ===== */
-
-/* Estilo dos botões das abas */
-.tab-button {
-    background-color: #FFD700; /* Dourado */
-    color: #c20e1a; /* Texto em vermelho da marca */
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 10px 15px;
-    margin-right: 5px;
-    transition: 0.3s;
-    font-size: 16px;
-    font-weight: bold;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    margin-bottom: -1px; 
-}
-
-.tab-button:hover {
-    background-color: #bfa600; /* Dourado mais escuro no hover */
-    color: #fff;
-}
-
-/* Estilo do botão ativo (selecionado) */
-.tab-button.active {
-    background-color: #fff; /* Fundo branco para 'conectar' com a tabela */
-    color: #c20e1a; /* Texto em vermelho (Cor da marca) */
-    border-bottom: 3px solid #fff; /* Linha de destaque branca (para cobrir a borda da tabela) */
-}
-
-/* Esconde o conteúdo das abas por padrão */
-.tab-content {
-    display: none; 
-    text-align: left; 
-}
-
-/* Mostra apenas a aba com a classe 'active' */
-.tab-content.active {
-    display: block;
-}
-
-/* Estilo das abas no Modo Noturno */
-body.dark-mode .tab-button {
-    background-color: #b00c15; 
-    color: #fff;
-}
-
-body.dark-mode .tab-button:hover {
-    background-color: #ff1a2c;
-}
-
-body.dark-mode .tab-button.active {
-    background-color: #2a0b10; /* Fundo escuro (mesmo da tabela) */
-    color: #FFD700; /* Texto dourado */
-    border-bottom: 3px solid #2a0b10;
-}
-
-body.dark-mode .tab-content h2 {
-    color: #f5f5f5;
-}
